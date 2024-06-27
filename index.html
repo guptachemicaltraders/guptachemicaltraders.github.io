@@ -3,6 +3,114 @@
 
 <head>
 
+    <style>
+        .box {
+            background-color: transparent;
+            border-radius: 3px;
+            color: #fff;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            height: 300px;
+            transform-style: preserve-3d;
+            perspective: 2000px;
+            transition: 0.4s;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .box:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border-top: 20px solid #fff;
+            border-left: 20px solid #fff;
+            box-sizing: border-box;
+        }
+
+        .box:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 20px solid #fff;
+            border-right: 20px solid #fff;
+            box-sizing: border-box;
+        }
+
+        .box .fas {
+            font-size: 25px;
+            height: 50px;
+            width: 50px;
+            line-height: 50px !important;
+            background-color: #fff;
+            color: #2C3A47;
+        }
+
+        .box .fa2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .box .text {
+            position: absolute;
+            top: 30px;
+            left: -30px;
+            width: calc(100% + 60px);
+            height: calc(100% - 60px);
+            background-color: #2C3A47;
+            border-radius: 3px;
+            transition: 0.4s;
+        }
+
+        .box .text .fa1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box .text div {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: center;
+            width: 100%;
+            padding: 30px 60px;
+            line-height: 1.5;
+            box-sizing: border-box;
+        }
+
+        .box .text div h3 {
+            margin-top: 30px;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .box .text div p {
+            font-size: 22px;
+            color: white;
+        }
+
+        .box:hover {
+            transform: translate(-50%, -50%) rotateY(-20deg) skewY(3deg);
+        }
+
+        .box:hover .text {
+            transform: rotateY(20deg) skewY(-3deg);
+        }
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -66,7 +174,7 @@ https://templatemo.com/tm-570-chain-app-dev
                             <li class="scroll-to-section"><a href="#services">Services</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
                             <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-                            <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
+                            <!-- <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li> -->
                             <!-- <li>
                                 <div class="gradient-button"><a id="modal_trigger" href="#modal"><i
                                             class="fa fa-sign-in-alt"></i> Sign In Now</a></div>
@@ -181,23 +289,32 @@ https://templatemo.com/tm-570-chain-app-dev
                                 data-wow-delay="1s">
                                 <div class="row">
                                     <div class="col-lg-12">
+
+                                        <div class="box"><i class="fas fa-quote-left fa2"></i>
+                                            <div class="text"><i class="fas fa-quote-right fa1"></i>
+                                                <div>
+                                                    <!-- <h3>Quote the day</h3> -->
+                                                    <p>Ensuring cleanliness in homes or workplaces hinges on selecting
+                                                        top-tier
+                                                        cleaning products and appliances—crucial for both effectiveness
+                                                        and
+                                                        safety.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <!-- <p style="font-size: 30px; color: rgb(88, 10, 10);">The Best Housekeeping
                                             Chemicals And Appliances
                                             Provider</p> -->
-                                        <p style="font-size: 30px; font-style: italic; color: black;">✌ <br><br> When it
-                                            comes to ensuring
-                                            cleanliness in
-                                            homes
-                                            or
-                                            workplaces, choosing the best cleaning products and appliances is crucial
-                                            for effectiveness and safety.<br><br> 👌</p>
+                                        <!-- <p style="font-size: 30px; font-style: italic; color: black;">✌ <br><br>
+                                            <br><br> 👌</p> -->
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="white-button first-button scroll-to-section">
                                             <a href="tel:9799086197">Call Us <i class="fa fa-phone"
                                                     aria-hidden="true"></i></a>
                                         </div>
-                                        <div class="white-button scroll-to-section">
+                                        <div style="margin-left: 40px;" class="white-button scroll-to-section">
                                             <a href="mailto:gupta1974jpr@gmail.com">Mail US <i class="fa fa-envelope"
                                                     aria-hidden="true"></i></a>
                                         </div>
@@ -231,6 +348,7 @@ https://templatemo.com/tm-570-chain-app-dev
                         <br>
                         <ul style="color: royalblue; font-weight: bold;">
                             <li>Floor Cleaner</li>
+                            <li>Handwash</li>
                             <li>Washroom cleaner</li>
                             <li>Ceramic Items Cleaner</li>
                             <li>Everyday Utensils Cleaner</li>
@@ -247,45 +365,47 @@ https://templatemo.com/tm-570-chain-app-dev
                 <div class="col-lg-3">
                     <div class="service-item first-service">
                         <div class="icon"></div>
-                        <h4>App Maintenance</h4>
-                        <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-                        <div class="text-button">
+                        <h4>Product Packaging</h4>
+                        <p>Packaging perfection for products that shine.<br> Wrap up your satisfaction with our premium
+                            packaging solutions.</p>
+                        <!-- <div class="text-button">
                             <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="service-item second-service">
                         <div class="icon"></div>
-                        <h4>Rocket Speed of App</h4>
-                        <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this
-                            layout.</p>
-                        <div class="text-button">
+                        <h4>Rocket Speed Delivery</h4>
+                        <p>Where Speed Meets Reliability! <br> Delivering products at warp speed: where efficiency meets
+                            excellence! <br> Zooming Packages to Your
+                            Doorstep!</p>
+                        <!-- <div class="text-button">
                             <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="service-item third-service">
                         <div class="icon"></div>
-                        <h4>Multi Workflow Idea</h4>
-                        <p>If this template is beneficial for your work, please support us <a rel="nofollow"
-                                href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.
+                        <h4>Multi Product Handles</h4>
+                        <p>Unlock efficiency across your product lineup with our all-in-one Multi Product Handles—where
+                            management meets simplicity.
                         </p>
-                        <div class="text-button">
+                        <!-- <div class="text-button">
                             <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="service-item fourth-service">
                         <div class="icon"></div>
                         <h4>24/7 Help &amp; Support</h4>
-                        <p>Lorem ipsum dolor consectetur adipiscing elit sedder williamsburg photo booth quinoa and
-                            fashion axe.</p>
-                        <div class="text-button">
+                        <p>Experience 24/7 help and support tailored to your needs.
+                            Your round-the-clock solution for seamless management.</p>
+                        <!-- <div class="text-button">
                             <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -297,25 +417,34 @@ https://templatemo.com/tm-570-chain-app-dev
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="section-heading">
-                        <h4>About <em>What We Do</em> &amp; Who We Are</h4>
+                        <h4>About <em>What We Do</em> &amp; <em>Who We Are</em></h4>
                         <img src="assets/images/heading-line-dec.png" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <p style="color: black;">
+                            As a leading housekeeping chemicals trader and provider, we pride ourselves on our
+                            commitment to delivering high-quality products and exceptional service to our clients. Our
+                            primary goal is to ensure that every establishment we serve maintains a clean, safe, and
+                            hygienic environment through the use of our specialized cleaning solutions.</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="box-item">
-                                <h4><a href="#">Maintance Problems</a></h4>
-                                <p>Lorem Ipsum Text</p>
+                                <h4><a href="#">What We Do:</a></h4>
+                                <p>We specialize in the trading of high-quality housekeeping chemicals, catering to
+                                    diverse industries and sectors. Our extensive range of products includes cleaning
+                                    agents, disinfectants, and specialty solutions tailored to meet the stringent
+                                    demands of cleanliness and hygiene standards.</p>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="box-item">
-                                <h4><a href="#">24/7 Support &amp; Help</a></h4>
-                                <p>Lorem Ipsum Text</p>
+                                <h4><a href="#">Who We Are:</a></h4>
+                                <p>With years of experience and a customer-centric approach, we aim to be your trusted
+                                    partner in maintaining clean and healthy spaces. Partner with us for dependable
+                                    service, competitive pricing, and solutions that prioritize performance and
+                                    sustainability.</p>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <!-- <div class="col-lg-6">
                             <div class="box-item">
                                 <h4><a href="#">Fixing Issues About</a></h4>
                                 <p>Lorem Ipsum Text</p>
@@ -326,15 +455,15 @@ https://templatemo.com/tm-570-chain-app-dev
                                 <h4><a href="#">Co. Development</a></h4>
                                 <p>Lorem Ipsum Text</p>
                             </div>
-                        </div>
-                        <div class="col-lg-12">
+                        </div> -->
+                        <!-- <div class="col-lg-12">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor idunte ut
                                 labore et dolore adipiscing magna.</p>
                             <div class="gradient-button">
                                 <a href="#">Start 14-Day Free Trial</a>
                             </div>
                             <span>*No Credit Card Required</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -346,7 +475,7 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
     </div>
 
-    <div id="clients" class="the-clients">
+    <!-- <div id="clients" class="the-clients">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
@@ -605,20 +734,25 @@ https://templatemo.com/tm-570-chain-app-dev
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div id="pricing" class="pricing-tables">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
+                        <h4>We Have The Best Pre-Order <em>Prices</em> of our <em>Products</em> You Can Get</h4>
                         <img src="assets/images/heading-line-dec.png" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut
-                            labore et dolore magna.</p>
+                        <p style="color: black; font-size: 20px;">Download our comprehensive price list to explore our
+                            offerings and make
+                            informed decisions
+                            effortlessly.</p>
+                        <br><br>
+                        <div class="gradient-button"><a href=""><i class="fa fa-download"></i>
+                                Download PDF</a></div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <div class="pricing-item-regular">
                         <span class="price">$12</span>
                         <h4>Standard Plan App</h4>
@@ -677,20 +811,20 @@ https://templatemo.com/tm-570-chain-app-dev
                             <a href="#">Purchase This Plan Now</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
-    <footer id="newsletter">
+    <footer style="margin-top: -50px;" id="newsletter">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h4>Join our mailing list to receive the news &amp; latest trends</h4>
+                        <h4>Join us to meet your household &amp; workplace requirements latest trends</h4>
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-3">
+                <!-- <div class="col-lg-6 offset-lg-3">
                     <form id="search" action="#" method="GET">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6">
@@ -707,35 +841,48 @@ https://templatemo.com/tm-570-chain-app-dev
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-lg-3">
                     <div class="footer-widget">
-                        <h4>Contact Us</h4>
-                        <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                        <p><a href="#">010-020-0340</a></p>
-                        <p><a href="#">info@company.co</a></p>
+                        <h4>About Our Company</h4>
+                        <!-- <div class="logo">
+                            <img src="assets/images/logonew.png" alt="">
+                        </div> -->
+                        <p>We specialize in the trading of high-quality housekeeping chemicals,
+                            catering to the diverse needs of businesses across various industries. With a commitment to
+                            excellence and customer satisfaction, we offer a comprehensive range of cleaning solutions
+                            that ensure hygiene, safety, and cleanliness.</p>
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h4>Contact Us</h4>
+                        <p>104, Sitaram Bazaar, Brahmpuri, Jaipur</p>
+                        <p><a href="tel:9799086197">+91-9799086197</a></p>
+                        <p><a href="mailto:gupta1974jpr@gmail.com">gupta1974jpr@gmail.com</a></p>
+                    </div>
+                </div>
+
                 <div class="col-lg-3">
                     <div class="footer-widget">
                         <h4>About Us</h4>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                            <!-- <li><a href="#">Testimonials</a></li> -->
+                            <li><a href="#pricing">Pricing</a></li>
+                        </ul>
+                        <!-- <ul>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Testimonials</a></li>
                             <li><a href="#">Pricing</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Pricing</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <!-- <div class="col-lg-3">
                     <div class="footer-widget">
                         <h4>Useful Links</h4>
                         <ul>
@@ -751,25 +898,17 @@ https://templatemo.com/tm-570-chain-app-dev
                             <li><a href="#">Normal Apps</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-3">
                     <div class="footer-widget">
-                        <h4>About Our Company</h4>
-                        <div class="logo">
-                            <img src="assets/images/white-logo.png" alt="">
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore.</p>
+                        <h4>Logo</h4>
+                        <img src="assets/images/logonew.png" alt="logo">
                     </div>
                 </div>
+
                 <div class="col-lg-12">
                     <div class="copyright-text">
-                        <p>Copyright © 2022 Chain App Dev Company. All Rights Reserved.
-                            <br>Design: <a href="https://templatemo.com/" target="_blank"
-                                title="css templates">TemplateMo</a><br>
-
-                            Distributed By: <a href="https://themewagon.com/" target="_blank"
-                                title="Bootstrap Template World">ThemeWagon</a>
+                        <p>Copyright © 2024 Gupta Chemical Traders. All Rights Reserved.
                         </p>
                     </div>
                 </div>

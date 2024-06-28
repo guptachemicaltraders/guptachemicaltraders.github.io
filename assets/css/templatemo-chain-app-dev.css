@@ -294,9 +294,9 @@ body {
   font-size: 18px;
 }
 
-.white-button a: {
-  background-color: #4b8ef1;
-  color: #fff !important;
+.white-button a:hover {
+  color: #4b8ef1 !important;
+  background-color: #fff;
 }
 
 .text-button a {

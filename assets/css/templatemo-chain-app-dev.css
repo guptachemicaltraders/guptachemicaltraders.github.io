@@ -1124,6 +1124,10 @@ Services Style
   transition: all .3s;
 }
 
+.service-item:hover {
+  background-image: none;
+}
+
 .service-item .icon {
   margin-left: 0px;
   margin-bottom: 30px;
@@ -1146,46 +1150,52 @@ Services Style
   margin-bottom: 20px;
 }
 
-.service-item:hover h4,
-.service-item:hover p,
-.service-item:hover .text-button a {
+.service-item h4,
+.service-item p,
+.service-item .text-button a {
   color: #fff;
 }
 
-.first-service .icon {
-  background-image: url(../images/service-icon-01.png);
+.service-item:hover h4,
+.service-item:hover p,
+.service-item:hover .text-button a {
+  color: black;
 }
 
 .first-service:hover .icon {
+  background-image: url(../images/service-icon-01.png);
+}
+
+.first-service .icon {
   background-image: url(../images/service-icon-hover-01.png);
 }
 
-.second-service .icon {
+.second-service:hover .icon {
   background-image: url(../images/service-icon-02.png);
 }
 
-.second-service:hover .icon {
+.second-service .icon {
   background-image: url(../images/service-icon-hover-02.png);
 }
 
 
-.third-service .icon {
+.third-service:hover .icon {
   background-image: url(../images/service-icon-03.png);
 }
 
-.third-service:hover .icon {
+.third-service .icon {
   background-image: url(../images/service-icon-hover-03.png);
 }
 
-.fourth-service .icon {
+.fourth-service:hover .icon {
   background-image: url(../images/service-icon-04.png);
 }
 
-.fourth-service:hover .icon {
+.fourth-service .icon {
   background-image: url(../images/service-icon-hover-04.png);
 }
 
-.service-item:hover {
+.service-item {
   background-image: url(../images/service-bg.jpg);
   background-position: right top;
   background-repeat: no-repeat;

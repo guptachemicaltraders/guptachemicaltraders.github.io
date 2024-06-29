@@ -2097,9 +2097,9 @@ responsive
     background-color: #fff;
   }
 
-  .main-banner:after {
+  /* .main-banner:after {
     display: none;
-  }
+  } */
 
   .main-banner .left-content h2 {
     color: #2a2a2a;
